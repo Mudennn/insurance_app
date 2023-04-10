@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 
+import '../../models/categorie.dart';
 import '../../size_config.dart';
 
 class CategoriesList extends StatelessWidget {
   const CategoriesList({
-    super.key,
+    super.key, required this.categorie, required this.press,
   });
+
+  final Categorie categorie;
+  final GestureTapCallback press;
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: categorieList.length,
-      itemBuilder: (BuildContext context, int index) {
-        return GestureDetector(
-          onTap: () {},
+    return  GestureDetector(
+          onTap: press,
           child: Container(
             margin: const EdgeInsets.symmetric(vertical: 4),
             child: SizedBox(
-              height: getProportionateScreenHeight(150),
+              height: getProportionateScreenHeight(144),
               width: double.infinity,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
@@ -25,7 +26,7 @@ class CategoriesList extends StatelessWidget {
                   fit: StackFit.expand,
                   children: [
                     Image.asset(
-                      categorieList[index].image,
+                      categorie.image,
                       fit: BoxFit.cover,
                     ),
                     Container(
@@ -55,7 +56,7 @@ class CategoriesList extends StatelessWidget {
                             Container(
                               alignment: AlignmentDirectional.centerStart,
                               child: Text(
-                                categorieList[index].title,
+                                categorie.title,
                                 style: TextStyle(
                                     fontSize: getProportionateScreenWidth(14),
                                     fontWeight: FontWeight.bold,
@@ -72,31 +73,7 @@ class CategoriesList extends StatelessWidget {
             ),
           ),
         );
-      },
-    );
   }
 }
 
-class Categorie {
-  final String image, title;
 
-  Categorie({
-    required this.image,
-    required this.title,
-  });
-}
-
-final List<Categorie> categorieList = [
-  Categorie(
-    image: "assets/images/Mountain1.jpg",
-    title: "Categorie 1",
-  ),
-  Categorie(
-    image: "assets/images/Mountain2.jpg",
-    title: "Categorie 2",
-  ),
-  Categorie(
-    image: "assets/images/Mountain3.jpg",
-    title: "Categorie 3",
-  ),
-];

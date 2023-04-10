@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../constant.dart';
 import '../../size_config.dart';
+import 'categories_container.dart';
 import 'categories_list.dart';
 
 class Body extends StatelessWidget {
@@ -52,31 +53,13 @@ class Body extends StatelessWidget {
                 EdgeInsets.symmetric(
                   horizontal: getProportionateScreenWidth(20),
                 ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Categories",
-                  style: TextStyle(
-                      fontSize: getProportionateScreenWidth(18),
-                      fontWeight: FontWeight.w600,
-                      color: headingColor),
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const SizedBox(
-                  height: double.maxFinite,
-                  child: CategoriesList(),
-                )
-                
-              ],
-            ),
+            child: const CategoriesContainer(),
           )
         ],
       ),
     ));
   }
 }
+
+
 

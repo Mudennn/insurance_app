@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:insurance_app/constant.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar(
+import 'back_button.dart';
+
+class QuestionAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const QuestionAppBar(
       {super.key, this.title = '', this.leading, this.titleWidget, this.onActionTap, this.rightLeading});
 
   final String title;
@@ -46,10 +48,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   leading ??
                       Transform.translate(
                         offset: const Offset(-14, 0),
-                        child: GestureDetector(
-                          onTap: () => Navigator.pop(context),
-                          child: const Icon(Icons.arrow_back_ios_new_outlined),
-                        ),
+                        child: BackBtn(iconData: Icons.arrow_back_ios_new,
+                press: () => Navigator.pop(context),)
                       ),
                       // ICON BELAH KANAN //
                   // if (showActionIcon)
