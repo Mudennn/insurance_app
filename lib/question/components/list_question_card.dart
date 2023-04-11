@@ -36,7 +36,7 @@ class ListQuestionCard extends StatelessWidget {
                           image: AssetImage(listQuestion.image.toString()),
                           fit: BoxFit.cover)),
                 )
-              : VideoContainer(listQuestion: listQuestion), // Video Container
+              : VideoContainer(listQuestion: listQuestion), // Video Container 
           const SizedBox(
             height: 8,
           ),

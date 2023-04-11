@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
+import '../feedback/feedback_screen.dart';
 import '../home/home_screen.dart';
 import '../profile/profile_screen.dart';
 
@@ -18,6 +19,7 @@ class _MainPageState extends State<MainPage> {
   // List pages untuk bottom nav bar
   List pages = const [
     HomeScreen(),
+    FeedbackScreen(),
     // SearchPage(),
     // ActivityPage(),
     // TripPage(),
@@ -53,10 +55,10 @@ class _MainPageState extends State<MainPage> {
               label: "Home",
               icon: Icon(Icons.home),
             ),
-            // BottomNavigationBarItem(
-            //   label: "Search",
-            //   icon: Icon(Icons.search_outlined),
-            // ),
+            BottomNavigationBarItem(
+              label: "Feedback",
+              icon: Icon(Icons.feedback_outlined),
+            ),
             // BottomNavigationBarItem(
             //   label: "Activity",
             //   icon: Icon(Icons.directions_walk),

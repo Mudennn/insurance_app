@@ -15,10 +15,10 @@ class QuestionScreen extends StatelessWidget {
     return Scaffold(
       appBar: QuestionAppBar(
         question: arguments.question,
-        rightLeading: const Icon(
-          Icons.search_outlined,
-          color: Colors.white,
-        ),
+        // rightLeading: const Icon(
+        //   Icons.search_outlined,
+        //   color: Colors.white,
+        // ),
       ),
       body: Body(question: arguments.question),
     );

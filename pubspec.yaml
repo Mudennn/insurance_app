@@ -38,6 +38,7 @@ dependencies:
   flutter_svg:
   provider:
   video_player: 
+  intl: ^0.17.0 
  
 
 dev_dependencies:
