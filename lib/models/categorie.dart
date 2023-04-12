@@ -20,4 +20,12 @@ final List<Categorie> categorieList = [
     image: "assets/images/Mountain3.jpg",
     title: "Title 3",
   ),
+  Categorie(
+    image: "assets/images/Mountain1.jpg",
+    title: "Title 4",
+  ),
+  Categorie(
+    image: "assets/images/Mountain2.jpg",
+    title: "Title 5",
+  ),
 ];

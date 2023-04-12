@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../announcement/announcement_screen.dart';
+import '../category/category_screen.dart';
 import '../constant.dart';
 import '../feedback/feedback_screen.dart';
 import '../home/home_screen.dart';
@@ -20,11 +21,9 @@ class _MainPageState extends State<MainPage> {
   // List pages untuk bottom nav bar
   List pages = const [
     HomeScreen(),
+    CategoryScreen(),
     FeedbackScreen(),
     AnnouncementScreen(),
-    // SearchPage(),
-    // ActivityPage(),
-    // TripPage(),
     ProfileScreen(),
   ];
 
@@ -45,8 +44,8 @@ class _MainPageState extends State<MainPage> {
           currentIndex: currentIndex, // untuk boleh tukar2 page atau tengok current page
           selectedItemColor: buttonColor,
           unselectedItemColor: textColor,
-          showSelectedLabels: true,
-          showUnselectedLabels: true,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           elevation: 0,
           type: BottomNavigationBarType.fixed, // tak nak bagi dia bergerak gerak dan boleh tukar color background
           backgroundColor: Colors.white,
@@ -58,6 +57,10 @@ class _MainPageState extends State<MainPage> {
               icon: Icon(Icons.home),
             ),
             BottomNavigationBarItem(
+              label: "Category",
+              icon: Icon(Icons.category_outlined),
+            ),
+            BottomNavigationBarItem(
               label: "Feedback",
               icon: Icon(Icons.feedback_outlined),
             ),
@@ -65,10 +68,7 @@ class _MainPageState extends State<MainPage> {
               label: "Announcement",
               icon: Icon(Icons.phone_android_outlined),
             ),
-            // BottomNavigationBarItem(
-            //   label: "Trip",
-            //   icon: Icon(Icons.chat),
-            // ),
+            
             BottomNavigationBarItem(
               label: "Profile",
               icon: Icon(Icons.person),

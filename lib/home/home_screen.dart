@@ -18,11 +18,8 @@ class HomeScreen extends StatelessWidget {
           "MILG",
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white),
-            
         ),
-
       ),
-
       body: Body(),
     );
   }
