@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../announcement/announcement_screen.dart';
 import '../constant.dart';
 import '../feedback/feedback_screen.dart';
 import '../home/home_screen.dart';
@@ -20,6 +21,7 @@ class _MainPageState extends State<MainPage> {
   List pages = const [
     HomeScreen(),
     FeedbackScreen(),
+    AnnouncementScreen(),
     // SearchPage(),
     // ActivityPage(),
     // TripPage(),
@@ -59,10 +61,10 @@ class _MainPageState extends State<MainPage> {
               label: "Feedback",
               icon: Icon(Icons.feedback_outlined),
             ),
-            // BottomNavigationBarItem(
-            //   label: "Activity",
-            //   icon: Icon(Icons.directions_walk),
-            // ),
+            BottomNavigationBarItem(
+              label: "Announcement",
+              icon: Icon(Icons.phone_android_outlined),
+            ),
             // BottomNavigationBarItem(
             //   label: "Trip",
             //   icon: Icon(Icons.chat),

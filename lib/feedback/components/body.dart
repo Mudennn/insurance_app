@@ -23,7 +23,6 @@ class _BodyState extends State<Body> {
   DateTimeRange dateRange =
       DateTimeRange(start: DateTime(2019, 11, 5), end: DateTime(2130, 11, 5));
 
-  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -44,18 +43,6 @@ class _BodyState extends State<Body> {
             // const SizedBox(
             //   height: 16,
             // ),
-
-            // -- DROPDOWN BUTTON -- //
-            const DropdownBtn(),
-
-            // -- TITLE -- //
-            InputField(
-              title: "Title",
-              hint: "Enter your title",
-              height: 54,
-              controller: titleController,
-            ),
-            
             // -- DATE -- //
             InputField(
               title: "Date",
@@ -69,7 +56,21 @@ class _BodyState extends State<Body> {
                 color: Colors.grey,
               ),
             ),
-            
+
+            const SizedBox(
+              height: 20,
+            ),
+
+            // -- DROPDOWN BUTTON -- //
+            const DropdownBtn(),
+
+            // -- TITLE -- //
+            InputField(
+              title: "Title",
+              hint: "Enter your title",
+              height: 54,
+              controller: titleController,
+            ),
 
             // -- DESCRIPTION -- //
             InputField(
