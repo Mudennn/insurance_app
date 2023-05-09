@@ -41,7 +41,7 @@ class CategoryListView extends StatelessWidget {
                     press: () => Navigator.pushNamed(
                         context, QuestionScreen.routeName,
                         arguments: QuestionDetailArgument(
-                            question: questionList[index])));
+                        question: questionList[index])));
               }),
         ),
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/feedback_bar.dart';
 import '../components/question_appbar.dart';
 import '../models/question.dart';
 import 'components/body.dart';
@@ -21,6 +22,7 @@ class QuestionScreen extends StatelessWidget {
         // ),
       ),
       body: Body(question: arguments.question),
+      bottomNavigationBar: const FeedbackBar(),
     );
   }
 }

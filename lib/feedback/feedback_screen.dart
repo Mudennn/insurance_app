@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/back_button.dart';
 import '../components/custome_appbar.dart';
 import 'components/body.dart';
 
@@ -11,9 +12,10 @@ class FeedbackScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CustomAppBar(
-        title: "",
-        leading: Text("Feedback", style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white) ),
+        title: "Feedback",
+        // leading: Text("Feedback", style: TextStyle(
+        //       fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white) ),
+        
       ),
       body: Body(),
     );

@@ -48,7 +48,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         offset: const Offset(-14, 0),
                         child: GestureDetector(
                           onTap: () => Navigator.pop(context),
-                          child: const Icon(Icons.arrow_back_ios_new_outlined),
+                          child: const Icon(Icons.arrow_back_ios_new_outlined, color: Colors.white,),
                         ),
                       ),
                       // ICON BELAH KANAN //
