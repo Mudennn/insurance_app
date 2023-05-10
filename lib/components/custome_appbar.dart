@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:insurance_app/constant.dart';
+import 'back_button.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar(
@@ -44,13 +45,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   leading ??
-                      Transform.translate(
-                        offset: const Offset(-14, 0),
-                        child: GestureDetector(
-                          onTap: () => Navigator.pop(context),
-                          child: const Icon(Icons.arrow_back_ios_new_outlined, color: Colors.white,),
-                        ),
+                  BackBtn(
+                        iconData: Icons.arrow_back_ios_new,
+                        press: () => Navigator.pop(context),
                       ),
+                      // Transform.translate(
+                      //   offset: const Offset(-14, 0),
+                      //   child: GestureDetector(
+                      //     onTap: () => Navigator.pop(context),
+                      //     child: const Icon(Icons.arrow_back_ios_new_outlined, color: Colors.white,),
+                      //   ),
+                      // ),
                       // ICON BELAH KANAN //
                   // if (showActionIcon)
                   //   Transform.translate(
