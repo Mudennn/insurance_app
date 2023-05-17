@@ -4,13 +4,11 @@ import '../../constant.dart';
 import '../../models/categorie.dart';
 import '../../models/question.dart';
 import '../../question/question_screen.dart';
-import '../../size_config.dart';
-import 'mobile_homepage_category_list.dart';
+import 'desktop_homepage_category_list.dart';
 
-class CategoryListView extends StatelessWidget {
-  const CategoryListView({
-    super.key,
-  });
+
+class DesktopCategoryListView extends StatelessWidget {
+  const DesktopCategoryListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +16,15 @@ class CategoryListView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(
+       const Text(
           "Category",
           style: TextStyle(
-              fontSize: getProportionateScreenWidth(16),
+              fontSize: 16,
               fontWeight: FontWeight.w300,
               color: headingColor),
         ),
-        SizedBox(
-          height: getProportionateScreenHeight(8),
+        const SizedBox(
+          height: 8,
         ),
         SizedBox(
           height: 120,
@@ -36,7 +34,7 @@ class CategoryListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: categorieList.length,
               itemBuilder: (context, index) {
-                return MobileHomepageCagetoryList(
+                return DesktopHomepageCagetoryList(
                     categorie: categorieList[index],
                     press: () => Navigator.pushNamed(
                         context, QuestionScreen.routeName,

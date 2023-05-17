@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
+import '../responsive.dart';
 import '../size_config.dart';
 
 class SigninButton extends StatelessWidget {
@@ -24,7 +25,7 @@ class SigninButton extends StatelessWidget {
         onPressed: press,
         child: Text(
           text,
-          style: TextStyle(fontSize: getProportionateScreenWidth(18), color: Colors.white),
+          style: TextStyle(fontSize: !Responsive.isDesktop(context) ? getProportionateScreenWidth(14) : getProportionateScreenWidth(6), color: Colors.white),
         ),
       ),
     );

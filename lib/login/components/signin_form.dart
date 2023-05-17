@@ -6,6 +6,7 @@ import '../../../size_config.dart';
 import '../../components/form_error.dart';
 import '../../components/main_page.dart';
 import '../../components/sign_in_button.dart';
+import '../../responsive.dart';
 
 // Sign in form page untuk masukkan email dan password
 
@@ -116,8 +117,9 @@ class _SignFormState extends State<SignForm> {
         hintText: "Enter your password",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
-          padding: EdgeInsets.fromLTRB(0, getProportionateScreenWidth(20),
-              getProportionateScreenWidth(20), getProportionateScreenWidth(20)),
+          padding: !Responsive.isDesktop(context) ? EdgeInsets.fromLTRB(0, getProportionateScreenWidth(20),
+              getProportionateScreenWidth(20), getProportionateScreenWidth(20)) : EdgeInsets.fromLTRB(0, getProportionateScreenWidth(0),
+              getProportionateScreenWidth(0), getProportionateScreenWidth(0)),
           child: const Icon(Icons.lock_outline_rounded),
         ),
       ),
@@ -164,8 +166,9 @@ class _SignFormState extends State<SignForm> {
         floatingLabelBehavior: FloatingLabelBehavior.always,
         // suffixIcon: CustomeSurffixIcon(),
         suffixIcon: Padding(
-          padding: EdgeInsets.fromLTRB(0, getProportionateScreenWidth(20),
-              getProportionateScreenWidth(20), getProportionateScreenWidth(20)),
+          padding: !Responsive.isDesktop(context) ? EdgeInsets.fromLTRB(0, getProportionateScreenWidth(20),
+              getProportionateScreenWidth(20), getProportionateScreenWidth(20)) : EdgeInsets.fromLTRB(0, getProportionateScreenWidth(0),
+              getProportionateScreenWidth(0), getProportionateScreenWidth(0)),
           child: const Icon(Icons.email_outlined,),
           
         ),

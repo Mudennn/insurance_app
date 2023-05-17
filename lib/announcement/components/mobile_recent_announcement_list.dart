@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../models/announcement.dart';
 import '../../size_config.dart';
 
-class RecentAnnouncementList extends StatelessWidget {
-  const RecentAnnouncementList({
+class MobileRecentAnnouncementList extends StatelessWidget {
+  const MobileRecentAnnouncementList({
     super.key, required this.announcement, required this.press,
   });
 

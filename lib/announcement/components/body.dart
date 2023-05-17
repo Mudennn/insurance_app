@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../size_config.dart';
 import 'important_announcement.dart';
-import 'recent_announcement.dart';
+import 'mobile_recent_announcement.dart';
+
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -23,7 +24,7 @@ class Body extends StatelessWidget {
               SizedBox(
                 height: getProportionateScreenHeight(16),
               ),
-              const RecentAnnouncement()
+              const MobileRecentAnnouncement()
             ],
           ),
         ),

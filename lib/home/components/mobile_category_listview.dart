@@ -7,8 +7,8 @@ import '../../question/question_screen.dart';
 import '../../size_config.dart';
 import 'mobile_homepage_category_list.dart';
 
-class CategoryListView extends StatelessWidget {
-  const CategoryListView({
+class MobileCategoryListView extends StatelessWidget {
+  const MobileCategoryListView({
     super.key,
   });
 

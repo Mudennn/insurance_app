@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../../constant.dart';
 import '../../models/announcement.dart';
 import '../../size_config.dart';
-import 'recent_announcement_list.dart';
+import 'mobile_recent_announcement_list.dart';
 
-class RecentAnnouncement extends StatelessWidget {
-  const RecentAnnouncement({super.key});
+class MobileRecentAnnouncement extends StatelessWidget {
+  const MobileRecentAnnouncement({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class RecentAnnouncement extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        ...List.generate(announcementList.length, (index) => RecentAnnouncementList(
+        ...List.generate(announcementList.length, (index) => MobileRecentAnnouncementList(
             announcement: announcementList[index],
             press: (){},
           ),),

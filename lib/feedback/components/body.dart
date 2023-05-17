@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 import '../../components/dropdown_button.dart';
 import '../../components/feedback_button.dart';
 import '../../components/input_field.dart';
-import '../../constant.dart';
 import '../../size_config.dart';
 
 class Body extends StatefulWidget {

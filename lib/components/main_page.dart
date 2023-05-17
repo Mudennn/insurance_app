@@ -6,6 +6,8 @@ import '../constant.dart';
 import '../feedback/feedback_screen.dart';
 import '../home/home_screen.dart';
 import '../profile/profile_screen.dart';
+import '../responsive.dart';
+import 'desktop_appbar.dart';
 
 // Main page adalah sebuah page yang berkait dengan bottom navigation
 
@@ -36,10 +38,12 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    // final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      // appBar: Responsive.isDesktop(context) ? PreferredSize(child: DesktopAppBar(), preferredSize: Size(screenSize.width, 100.0)) : null,
       body: pages[currentIndex],
       // backgroundColor: Colors.white70,
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: !Responsive.isDesktop(context) ? BottomNavigationBar(
           onTap: onTap, // bind bagi boleh tukar2 page
           currentIndex: currentIndex, // untuk boleh tukar2 page atau tengok current page
           selectedItemColor: buttonColor,
@@ -73,7 +77,7 @@ class _MainPageState extends State<MainPage> {
               label: "Profile",
               icon: Icon(Icons.person),
             ),
-          ]),
+          ]) : const SizedBox.shrink(),
     );
   }
 }

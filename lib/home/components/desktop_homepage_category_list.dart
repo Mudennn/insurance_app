@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../../constant.dart';
 import '../../models/categorie.dart';
-import '../../size_config.dart';
 
-class HomepageCagetoryList extends StatelessWidget {
-  const HomepageCagetoryList({
+class DesktopHomepageCagetoryList extends StatelessWidget {
+  const DesktopHomepageCagetoryList({
     super.key, required this.categorie, required this.press,
   });
 
@@ -16,7 +14,7 @@ class HomepageCagetoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: press,
-      child: Container( margin: EdgeInsets.only(right: getProportionateScreenWidth(8)),
+      child: Container( margin: const EdgeInsets.only(right: 8),
         child: Column(
               children: [
         Container(
@@ -32,8 +30,8 @@ class HomepageCagetoryList extends StatelessWidget {
                   fit: BoxFit.cover),
             ),
           ),
-          SizedBox(
-            height: getProportionateScreenHeight(10),
+          const SizedBox(
+            height: 10,
           ),
           Text(
             categorie.title,
