@@ -4,7 +4,7 @@ import 'package:insurance_app/size_config.dart';
 import '../../components/search_bar.dart';
 import '../../models/list_question.dart';
 import '../../models/question.dart';
-import 'list_question_card.dart';
+import 'mobile_list_question_card.dart';
 
 // Page untuk view list question
 class MobileBody extends StatelessWidget {
@@ -24,7 +24,7 @@ class MobileBody extends StatelessWidget {
           children: [
             const SearchBar(),
             ...List.generate(listQuestion.length,
-                (index) => ListQuestionCard(listQuestion: listQuestion[index])),
+                (index) => MobileListQuestionCard(listQuestion: listQuestion[index])),
           ],
         ),
       ),

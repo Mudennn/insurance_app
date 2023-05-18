@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 
+import '../../responsive.dart';
 import '../../size_config.dart';
-import 'categories_container.dart';
+import 'mobile_categories_container.dart';
+import 'desktop_categories_container.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Responsive(
+      mobile: _MobileCategory(),
+      desktop: _DesktopCategory(),
+    );
+  }
+}
+
+class _MobileCategory extends StatelessWidget {
+  const _MobileCategory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +32,42 @@ class Body extends StatelessWidget {
                 EdgeInsets.symmetric(
                   horizontal: getProportionateScreenWidth(20),
                 ),
-            child: const CategoriesContainer(),
+            child: const MobileCategoriesContainer(),
           )
         ],
       ),
     ));
+  }
+}
+
+class _DesktopCategory extends StatelessWidget {
+  const _DesktopCategory({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Flexible(flex: 2, child: Container()),
+        SizedBox(
+          width: 600,
+          child: SafeArea(
+          child: SingleChildScrollView(
+              child: Column(
+          children: const[
+            SizedBox(height: 32,),
+            Padding(
+              padding:
+                  EdgeInsets.symmetric(
+                    horizontal: 20,
+                  ),
+              child: DesktopCategoriesContainer(),
+            )
+          ],
+              ),
+            )),
+        ),
+        Flexible(flex: 2, child: Container()),
+      ],
+    );
   }
 }

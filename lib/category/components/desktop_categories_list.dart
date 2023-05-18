@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../models/categorie.dart';
-import '../../size_config.dart';
 
-class CategoriesList extends StatelessWidget {
-  const CategoriesList({
+
+class DesktopCategoriesList extends StatelessWidget {
+  const DesktopCategoriesList({
     super.key, required this.categorie, required this.press,
   });
 
@@ -18,7 +18,7 @@ class CategoriesList extends StatelessWidget {
           child: Container(
             margin: const EdgeInsets.symmetric(vertical: 4),
             child: SizedBox(
-              height: getProportionateScreenHeight(144),
+              height: 144,
               width: double.infinity,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
@@ -46,9 +46,9 @@ class CategoriesList extends StatelessWidget {
                       left: 0,
                       right: 0,
                       child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: getProportionateScreenWidth(10),
-                          vertical: getProportionateScreenWidth(10),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 10,
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -57,8 +57,8 @@ class CategoriesList extends StatelessWidget {
                               alignment: AlignmentDirectional.centerStart,
                               child: Text(
                                 categorie.title,
-                                style: TextStyle(
-                                    fontSize: getProportionateScreenWidth(14),
+                                style: const TextStyle(
+                                    fontSize: 21,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),

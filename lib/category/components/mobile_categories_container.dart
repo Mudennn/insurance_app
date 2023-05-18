@@ -5,10 +5,10 @@ import '../../constant.dart';
 import '../../models/categorie.dart';
 import '../../question/question_screen.dart';
 import '../../size_config.dart';
-import 'categories_list.dart';
+import 'mobile_categories_list.dart';
 
-class CategoriesContainer extends StatelessWidget {
-  const CategoriesContainer({
+class MobileCategoriesContainer extends StatelessWidget {
+  const MobileCategoriesContainer({
     super.key,
   });
 
@@ -21,14 +21,14 @@ class CategoriesContainer extends StatelessWidget {
         Text(
           "Categories",
           style: TextStyle(
-              fontSize: getProportionateScreenWidth(18),
+              fontSize: getProportionateScreenWidth(18) ,
               fontWeight: FontWeight.w600,
               color: headingColor),
         ),
         const SizedBox(
           height: 16,
         ),
-        ...List.generate(categorieList.length, (index) => CategoriesList(
+        ...List.generate(categorieList.length, (index) => MobileCategoriesList(
             categorie: categorieList[index],
             press: ()=> Navigator.pushNamed(context, QuestionScreen.routeName, arguments: QuestionDetailArgument(question: questionList[index])),
           ),),

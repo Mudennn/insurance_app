@@ -5,8 +5,8 @@ import '../../models/list_question.dart';
 import '../../size_config.dart';
 import 'video.dart';
 
-class ListQuestionCard extends StatelessWidget {
-  const ListQuestionCard({super.key, required this.listQuestion});
+class MobileListQuestionCard extends StatelessWidget {
+  const MobileListQuestionCard({super.key, required this.listQuestion});
 
   // data dari model - List Question
   final ListQuestion listQuestion;
