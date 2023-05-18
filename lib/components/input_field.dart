@@ -44,18 +44,21 @@ class InputField extends StatelessWidget {
                         fontSize: 14, fontWeight: FontWeight.w400),
                     decoration: InputDecoration(
                       hintText: hint,
-                      focusedBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: placeholderColor,
-                          width: 0,
-                        ),
-                      ),
-                      enabledBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: placeholderColor,
-                          width: 0,
-                        ),
-                      ),
+                      // focusedBorder: const UnderlineInputBorder(
+                      //   borderSide: BorderSide(
+                      //     color: placeholderColor,
+                      //     width: 0,
+                
+                      //   ),
+                      // ),
+                      focusedBorder: InputBorder.none,
+                      // enabledBorder: const UnderlineInputBorder(
+                      //   borderSide: BorderSide(
+                      //     color: placeholderColor,
+                      //     width: 0,
+                      //   ),
+                      // ),
+                      enabledBorder: InputBorder.none
                     ),
                   ),
                 ),
