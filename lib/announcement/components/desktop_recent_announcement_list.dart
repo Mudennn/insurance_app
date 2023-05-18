@@ -17,7 +17,7 @@ class DesktopRecentAnnouncementList extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 4),
         child: SizedBox(
-          height: 200,
+          height: 144,
           width: double.infinity,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(16),
@@ -58,7 +58,7 @@ class DesktopRecentAnnouncementList extends StatelessWidget {
                             announcement.title,
                             style: const TextStyle(
                                 fontSize:
-                                    14,
+                                    21,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),

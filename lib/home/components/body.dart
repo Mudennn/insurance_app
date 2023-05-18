@@ -70,7 +70,7 @@ class _DesktopHomePage extends StatelessWidget {
     return Row(
       children: [
         Flexible(flex: 2, child: Container()),
-        SizedBox(width: 1200.0, child: SafeArea(
+        SizedBox(width: 800.0, child: SafeArea(
         child: SingleChildScrollView(
       child: Padding(
         padding:

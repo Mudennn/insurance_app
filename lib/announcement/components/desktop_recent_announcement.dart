@@ -15,7 +15,7 @@ class DesktopRecentAnnouncement extends StatelessWidget {
         const Text(
           "Recent Announcement",
           style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w300, color: headingColor),
+              fontSize: 21, fontWeight: FontWeight.w300, color: headingColor),
         ),
         const SizedBox(
           height: 8,
