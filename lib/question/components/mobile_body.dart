@@ -7,8 +7,8 @@ import '../../models/question.dart';
 import 'list_question_card.dart';
 
 // Page untuk view list question
-class Body extends StatelessWidget {
-  const Body({super.key, required this.question});
+class MobileBody extends StatelessWidget {
+  const MobileBody({super.key, required this.question});
   final Question question;
 
   @override

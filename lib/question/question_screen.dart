@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import '../components/feedback_bar.dart';
 import '../components/question_appbar.dart';
 import '../models/question.dart';
-import 'components/body.dart';
+import '../responsive.dart';
+import 'components/mobile_body.dart';
+import 'components/desktop_body.dart';
 
-// Ada argument, body dan Question appbar
+// Ada argument, body dan Question appbar dan button to feedback page
 class QuestionScreen extends StatelessWidget {
   static String routeName = "/question";
   const QuestionScreen({super.key});
@@ -21,8 +23,9 @@ class QuestionScreen extends StatelessWidget {
         //   color: Colors.white,
         // ),
       ),
-      body: Body(question: arguments.question),
-      bottomNavigationBar: const FeedbackBar(),
+      body: !Responsive.isDesktop(context) ? MobileBody(question: arguments.question) : DesktopBody(question: arguments.question),
+      
+      bottomNavigationBar: !Responsive.isDesktop(context) ? const FeedbackBar() : const SizedBox.shrink(),
     );
   }
 }

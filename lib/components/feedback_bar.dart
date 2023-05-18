@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../feedback/feedback_screen.dart';
+import '../responsive.dart';
 import 'individu_feedback_button.dart';
 
 class FeedbackBar extends StatelessWidget {
@@ -14,6 +15,7 @@ class FeedbackBar extends StatelessWidget {
         color: Colors.white
       ),
       height: 80,
+      width: !Responsive.isDesktop(context) ? double.infinity : 300.0,
       padding: const EdgeInsets.all(16),
       child:  SizedBox(
                 // width: getProportionateScreenWidth(190),

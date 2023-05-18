@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
+import '../responsive.dart';
 import '../size_config.dart';
 
 class IndividuFeedbackBtn extends StatelessWidget {
@@ -19,7 +20,7 @@ final String text;
         onPressed: press,
         child: Text(
           text,
-          style: TextStyle(fontSize: getProportionateScreenWidth(18), color: Colors.white),
+          style: TextStyle(fontSize:!Responsive.isDesktop(context) ? getProportionateScreenWidth(18) : getProportionateScreenWidth(4), color: Colors.white),
         ),
       ),
     );
