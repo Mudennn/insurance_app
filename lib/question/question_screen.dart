@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insurance_app/components/desktop_appbar.dart';
 import '../components/feedback_bar.dart';
 import '../components/question_appbar.dart';
 import '../models/question.dart';
@@ -16,13 +17,14 @@ class QuestionScreen extends StatelessWidget {
     final QuestionDetailArgument arguments =
         ModalRoute.of(context)!.settings.arguments as QuestionDetailArgument;
     return Scaffold(
-      appBar: QuestionAppBar(
-        question: arguments.question,
-        // rightLeading: const Icon(
-        //   Icons.search_outlined,
-        //   color: Colors.white,
-        // ),
-      ),
+      // appBar: QuestionAppBar(
+      //   question: arguments.question,
+      //   // rightLeading: const Icon(
+      //   //   Icons.search_outlined,
+      //   //   color: Colors.white,
+      //   // ),
+      // ),
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(80), child: Responsive(mobile: QuestionAppBar(question: arguments.question), desktop: const DesktopAppBar()),),
       body: !Responsive.isDesktop(context) ? MobileBody(question: arguments.question) : DesktopBody(question: arguments.question),
       
       bottomNavigationBar: !Responsive.isDesktop(context) ? const FeedbackBar() : const SizedBox.shrink(),

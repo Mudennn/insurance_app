@@ -26,12 +26,20 @@ class DesktopBody extends StatelessWidget {
             child: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+                  horizontal: 0,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                     Text(
+                          question.mainTitle,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              color: headingColor),
+                        ),
+                    
                     const SearchBar(),
                     ...List.generate(
                         listQuestion.length,

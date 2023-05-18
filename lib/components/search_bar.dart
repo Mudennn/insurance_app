@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
+import '../responsive.dart';
 import '../size_config.dart';
 
 class SearchBar extends StatelessWidget {
@@ -12,7 +13,7 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-          vertical: getProportionateScreenWidth(16)),
+          vertical:!Responsive.isDesktop(context) ? getProportionateScreenWidth(16) : 10),
       child: Container(
         width: double.maxFinite,
         height: 50,

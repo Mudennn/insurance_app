@@ -41,6 +41,7 @@ class _MainPageState extends State<MainPage> {
     // final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       // appBar: Responsive.isDesktop(context) ? PreferredSize(child: DesktopAppBar(), preferredSize: Size(screenSize.width, 100.0)) : null,
+      // appBar: Responsive.isDesktop(context) ? const DesktopAppBar() : null,
       body: pages[currentIndex],
       // backgroundColor: Colors.white70,
       bottomNavigationBar: !Responsive.isDesktop(context) ? BottomNavigationBar(
