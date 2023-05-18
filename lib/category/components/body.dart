@@ -49,7 +49,7 @@ class _DesktopCategory extends StatelessWidget {
       children: [
         Flexible(flex: 2, child: Container()),
         SizedBox(
-          width: 600,
+          width: 800,
           child: SafeArea(
           child: SingleChildScrollView(
               child: Column(

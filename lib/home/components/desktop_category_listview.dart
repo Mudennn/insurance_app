@@ -19,7 +19,7 @@ class DesktopCategoryListView extends StatelessWidget {
        const Text(
           "Category",
           style: TextStyle(
-              fontSize: 16,
+              fontSize: 21,
               fontWeight: FontWeight.w300,
               color: headingColor),
         ),

@@ -59,19 +59,19 @@ class _DesktopBody extends StatelessWidget {
           child: SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: getProportionateScreenWidth(20),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
           ),
           child: Column(
-            children: [
-              SizedBox(
-                height: getProportionateScreenHeight(32),
+            children:const [
+               SizedBox(
+                height: 32,
               ),
-              const DesktopImportantAnnouncement(),
+               DesktopImportantAnnouncement(),
               SizedBox(
-                height: getProportionateScreenHeight(16),
+                height: 16,
               ),
-              const DesktopRecentAnnouncement()
+               DesktopRecentAnnouncement()
             ],
           ),
         ),

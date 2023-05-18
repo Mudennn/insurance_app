@@ -85,7 +85,7 @@ class _DesktopHomePage extends StatelessWidget {
             Text(
               'Welcome John!',
               style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 32,
                   fontWeight: FontWeight.w600,
                   color: headingColor),
             ),

@@ -5,14 +5,14 @@ import '../../components/profile_detail_field.dart';
 import 'name_and_agent_id.dart';
 import 'profile_image.dart';
 
-class Body extends StatefulWidget {
-  const Body({super.key});
+class MobileBody extends StatefulWidget {
+  const MobileBody({super.key});
 
   @override
-  State<Body> createState() => _BodyState();
+  State<MobileBody> createState() => _MobileBodyState();
 }
 
-class _BodyState extends State<Body> {
+class _MobileBodyState extends State<MobileBody> {
   final double coverHeight = 100;
   final double profileHeight = 100;
   final double profileHeight2 = 110;
